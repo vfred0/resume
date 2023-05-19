@@ -1,0 +1,48 @@
+:root {
+    --mocha-red: #f38ba8;
+    --mocha-text: #cdd6f4;
+    --mocha-crust: #11111b;
+    --mocha-maroon: #eba0ac;
+}
+
+body {
+    background-color: var(--mocha-crust);
+}
+
+.about-me {
+    margin: 70px;
+}
+
+.about-me__name {
+    font-family: 'Halant', serif;
+    font-weight: 600;
+    font-size: 3.5em;
+    color: var(--mocha-text);
+}
+
+.about-me__paragraph {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--mocha-text);
+}
+
+.about-me__image {
+    width: 50%;
+    min-width: 150px;
+    border: 2px solid var(--mocha-red);
+}
+.nav-link {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    color: var(--mocha-text);
+    text-decoration: none;
+}
+
+.nav-link:focus {
+    color: var(--mocha-maroon);
+}
+
+.nav-link:hover {
+    color: var(--mocha-red);
+    text-decoration: underline;
+    animation: 0.5s ease-in-out;
+}
