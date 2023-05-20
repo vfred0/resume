@@ -7,42 +7,111 @@
 
 body {
     background-color: var(--mocha-crust);
+    color: var(--mocha-text);
 }
 
+::-moz-selection {
+    color: var(--mocha-red);
+}
+
+::selection {
+    color: var(--mocha-red);
+}
+
+
+.menu {
+    border-bottom: 2px solid var(--mocha-red);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.menu__link {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+        padding: 1.2em;
+    color: var(--mocha-text);
+}
+
+.menu__link:focus {
+    color: var(--mocha-maroon);
+}
+
+.menu__link:hover {
+    color: var(--mocha-red);
+    text-decoration: underline;
+    animation: 0.5s ease-in-out;
+}
 .about-me {
-    margin: 70px;
+    margin: 8vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        gap: 3em;
+    }
+
+    .about-me__column {
+        width: 100%;
+        animation: slide-in-to-right 0.5s ease-in-out;
+    }
+
+    @keyframes slide-in-to-right {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .about-me__column {
+        animation: slide-in-to-left 0.5s ease-in-out;
+    }
+
+    @keyframes slide-in-to-left {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 }
 
 .about-me__name {
     font-family: 'Halant', serif;
     font-weight: 600;
     font-size: 3.5em;
-    color: var(--mocha-text);
+    margin: 0;
 }
 
-.about-me__paragraph {
+.about-me__description {
     font-family: 'Nunito Sans', sans-serif;
-    color: var(--mocha-text);
 }
 
 .about-me__image {
     width: 50%;
     min-width: 150px;
+    border-radius: 50%;
     border: 2px solid var(--mocha-red);
-}
-.nav-link {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1em;
-    color: var(--mocha-text);
-    text-decoration: none;
-}
-
-.nav-link:focus {
-    color: var(--mocha-maroon);
-}
-
-.nav-link:hover {
-    color: var(--mocha-red);
-    text-decoration: underline;
-    animation: 0.5s ease-in-out;
 }
