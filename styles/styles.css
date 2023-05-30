@@ -18,7 +18,6 @@ body {
     color: var(--mocha-red);
 }
 
-
 .menu {
     border-bottom: 2px solid var(--mocha-red);
     display: flex;
@@ -28,9 +27,7 @@ body {
 
 .menu__link {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1em;
-    text-decoration: none;
-    padding: 1.2em;
+    text-decoration: none;        
     color: var(--mocha-text);
 }
 
@@ -59,9 +56,39 @@ body {
     width: 50%;
 }
 
+
+.about-me__name {
+    font-family: 'Halant', serif;
+    font-weight: 600;
+    font-size: 4em;    
+    margin: 0;
+}
+
+.about-me__description {
+    font-family: 'Nunito Sans', sans-serif;    
+}
+
+.about-me__image {
+    width: 50%;
+    min-width: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--mocha-red);
+}
+
+
+
 @media (max-width: 768px) {
+    .menu__link {
+        font-size: 1.05em;
+        padding: 0.9em;
+    }
+
     .about-me {
         gap: 3em;
+    }
+
+    .about-me__description {
+        font-size: 1.1em;
     }
 
     .about-me__column {
@@ -83,6 +110,14 @@ body {
 }
 
 @media (min-width: 769px) {
+    .menu__link {
+        font-size: 1.3em;
+        padding: 1.2em;
+    }
+
+    .about-me__description {
+        font-size: 1.4em;
+    }
     .about-me__column {
         animation: slide-in-to-left 0.5s ease-in-out;
     }
@@ -98,22 +133,4 @@ body {
             transform: translateX(0);
         }
     }
-}
-
-.about-me__name {
-    font-family: 'Halant', serif;
-    font-weight: 600;
-    font-size: 3.5em;
-    margin: 0;
-}
-
-.about-me__description {
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.about-me__image {
-    width: 50%;
-    min-width: 150px;
-    border-radius: 50%;
-    border: 2px solid var(--mocha-red);
 }
