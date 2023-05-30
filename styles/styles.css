@@ -60,7 +60,6 @@ body {
 .about-me__name {
     font-family: 'Halant', serif;
     font-weight: 600;
-    font-size: 4em;    
     margin: 0;
 }
 
@@ -75,8 +74,6 @@ body {
     border: 2px solid var(--mocha-red);
 }
 
-
-
 @media (max-width: 768px) {
     .menu__link {
         font-size: 1.05em;
@@ -85,6 +82,10 @@ body {
 
     .about-me {
         gap: 3em;
+    }
+
+    .about-me__name {
+        font-size: 3.5em;    
     }
 
     .about-me__description {
@@ -113,6 +114,9 @@ body {
     .menu__link {
         font-size: 1.3em;
         padding: 1.2em;
+    }
+    .about-me__name {
+        font-size: 4em;    
     }
 
     .about-me__description {
